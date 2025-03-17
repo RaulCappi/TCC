@@ -1,0 +1,139 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--g--color); /* Fundo preto */
+    color: var(--d--color);
+}
+
+/*---------------------------------------------*/
+/* Estilo da barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: var(--g--color); /* Fundo preto */
+    border-bottom: 1px solid var(--c--color);
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--d--color);
+    text-align: center;
+
+}
+
+.ntbl {
+    
+    margin-top: 2px;
+    text-align: center;
+}
+
+.img{
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--d--color);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--c--color); /* Tom cinza ao passar o mouse */
+}
+
+/*---------------------------------------------*/
+/* Botões e ícones */
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: var(--d--color);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btn:hover {
+    color: var(--c--color); /* Tom cinza ao passar o mouse */
+}
+
+.btn-entrar {
+    border: 1px solid var(--d--color);
+    color: var(--d--color);
+    background: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btnp:hover {
+    background: var(--d--color);
+    color: var(--g--color);
+}
+
+.btnp-partic {
+    background: var(--d--color);
+    color: var(--g--color);
+}
+
+.btnp-partic:hover {
+    background: var(--d--color);
+    color: var(--g--color);
+}
+
+.offcanvas-body a {
+    text-align: left;
+    font-weight: bold;
+    color: white;
+}
+
+.offcanvas-body i {
+    margin-right: 1.5rem;
+}
+
+.offcanvas-body button {
+    margin-left: 2.8rem;
+}
+
+.btn:hover {
+    color: grey;
+}
+
+.btn {
+    font-size: large;
+}
+
+/*----------------------PUBLICACAO-----------------------*/
+
+.imagem{
+    max-width: 80%;
+    height: auto;
+}
+
+.imagem-sobre{
+    max-width: 100%;
+    height: auto;
+}

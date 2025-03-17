@@ -1,0 +1,186 @@
+/*---------------------------------------------
+[ FONT ]*/
+
+
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Italic'), url('Segoe UI Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Segoe UI Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Bold Italic'), url('Segoe UI Bold Italic.woff') format('woff');
+    }
+
+  
+/*---------------------------------------------*/
+/*---------------------------------------------
+[ LETTERS ]*/
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0px;
+}
+
+p{
+    font-family: 'Segoe UI Regular';
+}
+
+span{
+    font-family: 'Segoe UI Regular';
+
+}
+
+::placeholder{
+    font-family: 'Segoe UI Regular';
+}
+
+h1 {
+    font-family: 'Segoe UI Bold';
+}
+
+h2 {
+    font-family: 'Segoe UI Regular';
+}
+
+h3 {
+    font-family: 'Segoe UI Regular';
+}
+
+h4 {
+    font-family: 'Segoe UI Regular';
+}
+
+h5 {
+    font-family: 'Segoe UI Regular';
+}
+
+h6 {
+    font-family: 'Segoe UI Regular';
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(15, 15, 15);
+    /* Cor de fundo da trilha */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(63, 63, 63);
+    /* Cor do polegar */
+    border-radius: 10px;
+    /* Raio da borda do polegar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Cor do polegar ao passar o mouse */
+}
+
+
+/*---------------------------------------------*/
+/*---------------------------------------------
+[ COLORS ]*/
+
+:root{
+    --a--color: #ff0000;
+    --b--color: #040714;
+    --c--color: #343434;
+    --d--color: #FFFFFF;
+    --e--color: #2a2c2f;
+    --f--color: #fd2a00;
+    --g--color: #000000;
+}
+
+
+/*---------------------------------------------*/

@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+	height: 100%;
+}
+
+/*---------------------------------------------*/
+
+.cabecalho{
+    padding: 0px 120px;
+}
+
+.cabecalho{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabl{
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.lg{
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid var(--d--color);
+    background-color: transparent;
+    color: var(--d--color);
+    cursor: pointer
+}
+
+.lc{
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid var(--c--color);
+    background-color: var(--d--color);
+    color: var(--b--color);
+    cursor: pointer
+}
+
+.cabm{
+    color: var(--d--color);
+}
+
+.cabl{
+    color: var(--d--color);
+}
+/*---------------------------------------------*/
+
+/*.login{
+    margin-top: 25px;
+    margin-left: 27%;
+    border-radius: 15px;
+    background-color: var(--d--color);
+    border: 3px solid var(--b--color);
+    width: 40%;
+    height: 500px;
+    padding: 30px;
+    text-align: center;
+}*/
+
+
+
+.form{
+    text-align: left;
+    justify-content: left;
+    padding: 20px;
+}
+
+.form input{
+    width: 100%;
+    height: 40px;
+    border: solid var(--e--color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: black;
+}
+
+.form textarea{
+    width: 100%;
+    height: 100%;
+    border: solid var(--e--color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: black;
+}
+
+.form span{
+  font-size: large;
+}
+
+.btnlogin{
+    width: 100%;
+    height: 40px;
+    border: solid var(--e--color);
+    border-radius: 10px;
+    background-color: var(--c--color);
+}
+
+.senhad{
+    text-align: right;
+    color: var(--b--color);
+}
+/*---------------------------------------------*/
+
+.logos{
+    
+    padding: 35px 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}

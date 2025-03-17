@@ -1,0 +1,100 @@
+LIMITADOR DE POSTAGEM
+INDEX.PHP -->
+
+<nav class="text-center">
+        <ul class="pagination">
+            <?php
+            if (isset($_GET['publicacao'])) {
+                $pagina = (int) $_GET['publicacao'];
+            } else {
+                $pagina = 1;
+            }
+            ;
+
+            $conex = new Conn(); //Preciso da funcao rowCount();
+            $conn = $conex->conectar();
+
+            $seleciona = new Publicacao();
+
+            $query = "SELECT * FROM publicacao";
+            $stmt = $conn->prepare($query);
+            $stmt->execute();
+
+            $totalPub = $stmt->rowCount();
+            $vMaximo = $seleciona->valorMaximo();
+
+
+            $pags = ceil($totalPub / $vMaximo);
+            $links = 2;
+
+            echo "<li><a href='?pagina=inicio&publicacao=1' aria-label='Página Inicial'><span aria-hidden='true'>&laquo;</span></a></li>";
+
+            // for ($i = $pagina - $links; $i <= $pagina - 1; $i++) {
+            //     if ($i <= 0) {
+            //     } else {
+            //         echo "<li><a href='?pagina=inicio&publicacao='" . $i . "'>" . $i . "</a></li>";
+            //     }
+            // }
+            
+            echo "<li><a href='?pagina=inicio&publicacao='" . $pagina . "'></a></li>";
+
+            // for ($i = $pagina + 1; $i <= $pagina + $links; $i++) 
+            //     if ($i > $pags) {
+            //     } else {
+            //         echo "<li><a href='?pagina=inicio&publicacao='" . $i . "'>" . $i . "</a></li>";
+            
+            //     }
+            echo "<li><a href='?pagina=inicio&publicacao=" . $pags . "' aria-label='Última página'><span aria-hidden='true'>&raquo;</span></a></li>";
+
+
+
+            ?>
+        </ul>
+
+    </nav>
+
+PUBLICACAO.PHP -->
+ 
+ //public int $maximo = 4;
+
+ // public function valorMaximo(): int
+    // {
+    //     $this->maximo;
+    //     return $this->maximo;
+    // }
+
+     VIEW() --> // if (isset($_GET['publicacao'])) {
+        //     $pagina = (int) $_GET['publicacao'];
+        // } else {
+        //     $pagina = 1;
+        // }
+        // ;
+
+        // $this->maximo;
+        // //$this->maximo = $max; 
+
+        // $inicio = ($pagina * $this->maximo) - $this->maximo;
+
+INDEX.PHP --> VERIFICA PUBLICACAO
+ <?php
+
+                if (isset($_SESSION['usu_codigo'])) {
+                    $usu_codigo = $_SESSION['usu_codigo'];
+
+                    // Consulta para obter o valor de usu_publicar
+                
+                    $usuPub = new Usuario();
+                    $view = $usuPub->viewIndiv();
+
+                    $autorizacao = $usuPub->autorizacao($view($usu_codigo));
+
+                    if ($autorizacao != 0) {
+                        // Usuário tem permissão para publicar
+                        echo '<a href="./back-end/pub-create.php"><button class="btn btn-danger rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
+                    } else {
+                        // Usuário não tem permissão para publicar
+                        echo '<a href="./front-end/nao-autorizado.php"><button class="btn btn-danger rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
+                    }
+                }
+
+                ?>
