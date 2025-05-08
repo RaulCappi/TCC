@@ -96,6 +96,18 @@ body, html {
     color: black;
 }
 
+.form select{
+    width: 100%;
+    height: 100%;
+    border: solid var(--e--color);
+    border-radius: 10px;
+    background-color: transparent;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: black;
+
+}
+
 .form span{
   font-size: large;
 }

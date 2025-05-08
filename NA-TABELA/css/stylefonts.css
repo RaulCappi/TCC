@@ -1,13 +1,6 @@
 /*---------------------------------------------
 [ FONT ]*/
 
-
-@font-face {
-    font-family: 'Segoe UI Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');
-    }
     
 
     @font-face {
@@ -17,13 +10,6 @@
     src: local('Segoe UI Italic'), url('Segoe UI Italic.woff') format('woff');
     }
     
-
-    @font-face {
-    font-family: 'Segoe UI Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Segoe UI Bold'), url('Segoe UI Bold.woff') format('woff');
-    }
     
 
     @font-face {
@@ -81,6 +67,7 @@ h6 {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;700;800&display=swap');
 
 .poppins-light {
     font-family: "Poppins", sans-serif;
@@ -144,6 +131,25 @@ h6 {
     font-style: normal;
 
 }
+
+.kanit-medium {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.kanit-bold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.kanit-extrabold {
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;

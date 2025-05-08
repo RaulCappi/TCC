@@ -90,11 +90,63 @@ INDEX.PHP --> VERIFICA PUBLICACAO
 
                     if ($autorizacao != 0) {
                         // Usuário tem permissão para publicar
-                        echo '<a href="./back-end/pub-create.php"><button class="btn btn-danger rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
+                        echo '<a href="./config/pub-create.php"><button class="botao-pub btn btn-light rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
                     } else {
                         // Usuário não tem permissão para publicar
-                        echo '<a href="./front-end/nao-autorizado.php"><button class="btn btn-danger rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
+                        echo '<a href="./paginas/nao-autorizado.php"><button class="botao-pub btn btn-light rounded-pill p-2 w-75" style="font-weight: bold;">Publicar</button></a>';
                     }
                 }
 
                 ?>
+
+
+
+
+
+
+INDEX.PHP ---> LIMITADOR DE POSTAGENS 2.0
+
+    <nav class="text-center">
+        <ul class="justify-content-center">
+            <?php
+            $postsPorPagina = 1;
+            $publicacao = new Publicacao();
+
+            $paginaAtual = isset($_GET['pagina']) ? intval($_GET('pagina')) : 1;
+            $paginaAtual = max(1, $paginaAtual);
+            $totalPaginas = $publicacao->numeroTotalPaginas($postsPorPagina);
+            $paginaAtual = min($paginaAtual, $totalPaginas);
+
+            $publiPaginadas = $publicacao->publicaoesPaginadas($paginaAtual, $postsPorPagina);
+
+            $links = 2;
+
+            // Link para a primeira página
+            if ($paginaAtual > 1) {
+                echo "<li class='page-item'><a class='page-link' href='?pagina=inicio&publicacao=1' aria-label='Página Inicial'><span aria-hidden='true'>&laquo;</span></a></li>";
+            }
+
+            // Links para as páginas anteriores
+            for ($i = $paginaAtual - $links; $i < $paginaAtual; $i++) {
+                if ($i > 0) {
+                    echo "<li class='page-item'><a class='page-link' href='?pagina=inicio&publicacao=" . $i . "'>" . $i . "</a></li>";
+                }
+            }
+
+            // Página atual
+            echo "<li class='page-item active'><span class='page-link'>" . $paginaAtual . "</span></li>";
+
+            // Links para as próximas páginas
+            for ($i = $paginaAtual + 1; $i <= $paginaAtual + $links; $i++) {
+                if ($i <= $totalPaginas) {
+                    echo "<li class='page-item'><a class='page-link' href='?pagina=inicio&publicacao=" . $i . "'>" . $i . "</a></li>";
+                }
+            }
+
+            // Link para a última página
+            if ($paginaAtual < $totalPaginas) {
+                echo "<li class='page-item'><a class='page-link' href='?pagina=inicio&publicacao=" . $totalPaginas . "' aria-label='Última página'><span aria-hidden='true'>&raquo;</span></a></li>";
+            }
+            ?>
+        </ul>
+    </nav>
